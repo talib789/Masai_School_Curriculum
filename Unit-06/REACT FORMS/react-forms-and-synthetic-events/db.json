@@ -1,0 +1,22 @@
+{
+  "employeDetails": [
+    {
+      "name": "TALIB ALI",
+      "age": "222222",
+      "address": "Panki,  Palamu, Jharkhand",
+      "department": "sales",
+      "salary": "99922",
+      "martialState": false,
+      "id": 1
+    },
+    {
+      "name": "TALIB ALI",
+      "age": "222222",
+      "address": "Panki,  Palamu, Jharkhand",
+      "department": "sales",
+      "salary": "222222",
+      "martialState": false,
+      "id": 2
+    }
+  ]
+}
