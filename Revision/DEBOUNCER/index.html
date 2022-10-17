@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #query {
+        width: 300px;
+    }
+    #names {
+        border: solid 1px black;
+        height: 300px;
+        width: 305px;
+        border-top: none;
+        overflow: scroll;
+    }
+</style>
+<body>
+    <h1>Applied Debounce</h1>
+    <input oninput="debounce(main,1000)" type="text" id="query" />
+    <div id="names"></div>
+</body>
+</html>
+<script>
+    let id;
+    let names_div = document.getElementById('names');
+    async function searchNames() {
+        try {
+            const query = document.getElementById('query').value;
+            const res = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=e09994e1`)
+            const data = await res.json();
+            const names = data.Search;
+            return names
+        } catch (err) {
+            console.log("err:", err);
+        }
+    }
+    function appendNames(data) {
+        //optimization   
+        names_div.innerHTML = null;
+        data.forEach(function (el) {
+            let p = document.createElement('p')
+            p.innerText = el.Title;
+            names_div.append(p);
+        });
+    }
+    async function main() {
+        let data = await searchNames();
+        if (data === undefined) {
+            return false
+        }
+        appendNames(data);
+    }
+    ///3 debouncing
+    function debounce(func, delay) {
+        if (id) {
+            clearTimeout(id)
+        }
+        id = setTimeout(function () {
+            func();
+        }, delay);
+    }
+</script>
