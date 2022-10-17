@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Throttling</title>
+</head>
+
+<body>
+	<button id="throttle">click Me</button>
+</body>
+
+<script>
+	const btn = document.querySelector("#throttle");
+	const Functionthrottler =(func, delay) => {
+		let prev = 0;
+		return (...args) => {
+			let now = new Date().getTime();
+			console.log(now - prev, delay);
+			if (now - prev > delay) {
+				prev = now;
+				return func(...args);
+			}
+		};
+	};
+	btn.addEventListener("click",
+		Functionthrottler(() => {
+			console.log("it will run only specified intervel time");
+		}, 2000)
+	);
+</script>
+</html>
