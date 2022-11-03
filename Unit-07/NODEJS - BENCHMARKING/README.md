@@ -1,5 +1,5 @@
 # NODEJS - BENCHMARKING
-- create a basic http nodejs server with following routes
+- creating a basic http nodejs server with following routes
 - have a large at least 1mb of a text file
 - /textsync reads the file synchronously and returns response
 - /textasync reads the file async and returns response
