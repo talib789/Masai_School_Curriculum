@@ -55,7 +55,7 @@ export default function RecursiveComponent({
                     if (inpt !== "") {
                       replies.push({
                         id: `${nanoid(4)}`,
-                        author: "rohan",
+                        author: "talib",
                         body: `${inpt}`,
                         timestamp: "Sun Aug 02 2020 18:12:45 GMT+0530",
                         points: "3",
