@@ -1,0 +1,28 @@
+{
+  "movies": [
+    {
+      "ID": 1,
+      "Name": "Kirrish",
+      "Rating": 5,
+      "Description": "superhit",
+      "Genre": "Hritik",
+      "Cast": "THF"
+    },
+    {
+      "ID": 1,
+      "Name": "Kirrish",
+      "Rating": 5,
+      "Description": "superhit",
+      "Genre": "Hritik",
+      "Cast": "THF"
+    },
+    {
+      "ID": 1,
+      "Name": "Kirrish",
+      "Rating": 5,
+      "Description": "superhit",
+      "Genre": "Hritik",
+      "Cast": "THF"
+    }
+  ]
+}
