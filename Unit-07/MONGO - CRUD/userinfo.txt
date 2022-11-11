@@ -1,0 +1,29 @@
+Qsn-> All users whose gender is male
+Ans-> db.user_info.find({gender : "Male"})
+
+Qsn-> All users whose ID is even
+Ans-> db.user_info({id : {$mod : [2,0]}})
+
+Qsn-> All users who curretly live in Japan
+Ans-> db.user_info.find({native : "Japan"})
+
+Qsn-> Users who are female and live in India
+Ans-> db.user_info.find({gender : "Female", native : "India"})
+
+Qsn-> Users who are more than 25 years old
+Ans-> db.user_info.find( { age: { $gt: 4 } } )
+
+Qsn-> Users who are less than 50 years old and live in United State
+Ans-> db.user_info.find({age : { $gt: 50 }, native : "United States" } )
+
+Qsn-> Total number of users who want to relocate to France (count only)
+Ans-> db.user_info.find({relocate_to}).size()
+
+Qsn-> Total number of users who are from USA and want to relocate to russia, sort them by age in ascending order
+Ans-> db.user_info.find({native : "United States" , relocate_to : "Russia"}).sort({age : 1})
+
+Qsn-> get all users, sort them by total number of family member
+Ans-> db.user_info.find().sort({family_members : 1})
+
+Qsn-> get all users, sort them by age DESC order
+Ans-> db.user_info.find().sort({age : -1})
