@@ -1,0 +1,40 @@
+{
+    "posts": [
+        {
+            "id": 3,
+            "title": "hollywood",
+            "content": "movie",
+            "author": "Anybody"
+        },
+        {
+            "id": 2,
+            "title": "game",
+            "content": "hockey",
+            "author": "Talib"
+        },
+        {
+            "id": 1,
+            "title": "song",
+            "content": "tereliye",
+            "author": "talib"
+        },
+        {
+            "id": 3,
+            "title": "movie",
+            "content": "krrish",
+            "author": "talib"
+        },
+        {
+            "id": 3,
+            "title": "movie",
+            "content": "krrish",
+            "author": "talib"
+        },
+        {
+            "id": 3,
+            "title": "movie",
+            "content": "krrish",
+            "author": "talib"
+        }
+    ]
+}
