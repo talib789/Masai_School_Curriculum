@@ -1,13 +1,13 @@
 
 import jwt from 'jsonwebtoken'
 const payload = {
-    "name": "Umakant Vashishtha",
+    "name": "Md Talib Ansari",
     "_id": "12hj98yu343",
     "email": "abc@email.com",
     "image": "https://example.com/image.png",
     "exp": 1664637650
 }
-const SECRET = '23u4h98he9238neo23ije2093u4e2-30eri23-09rj203jer023h4e0239jr0-239';
+const SECRET = '5850485048504ireiftriei34r0934i543irt4i034i0';
 const token = jwt.sign(payload, SECRET)
 console.log(token)
 const decoded = jwt.decode(token);
