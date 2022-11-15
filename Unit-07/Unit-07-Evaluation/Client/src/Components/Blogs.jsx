@@ -23,7 +23,7 @@ function Blogs() {
             content
         }
         console.log(body)
-        try {
+        try{
             await fetch('http://localhost:3008/createBlog', {
                 method: 'POST',
                 headers: {
