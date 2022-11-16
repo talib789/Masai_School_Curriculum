@@ -1,0 +1,67 @@
+body{
+    margin:0;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+#logo{
+    width: 5%;
+}
+
+#github-logo,#profile-img{
+    width: 35px;
+    border-radius: 50%;
+}
+
+#search{
+    width: 15%;
+}
+
+#search input#search-input{
+    padding: 5px;
+    width: 100%;
+}
+
+#options{
+    width: 25%;
+}
+
+#options > ul#list{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul#list > li{
+    list-style-type: none;
+}
+
+#options > #list > li > a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#profile{
+    width: 55%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+#container > *{
+    border: 1px solid #cecece;
+    padding: 5px;
+}
