@@ -1,0 +1,33 @@
+/*tables related */
+table,
+td,
+th {
+    border: 1px solid #1eff00;
+}
+/* vavbar related */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(250, 236, 217);
+   
+}
+
+body {
+    margin: 0;
+}
+
+/* main - in create page for input boxes container */
+#main{
+    width: 40%;
+    margin : auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#main > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
