@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Page</title>
+    <style>
+        #navBar{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1%;
+        }
+        #navBar>a{
+            font-size: 20px;
+            text-decoration: none;
+        }
+        table{
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            border: 1px solid black;
+            line-height: 25px;
+        }
+        #employeeDetails{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="employeeDetails">
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="text" id="age" placeholder="Enter Age">
+        <select name="" id="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="other">other</option>
+        </select>
+        <input type="text" id="department" placeholder="Enter Department">
+        <input type="text" id="salary" placeholder="Enter Salary">
+        <button onclick="createEmpFn()">Add New Employee</button>
+    </div>
+    <br><br>
+    <br><br>
+    <div id="tableDiv">
+    </div>
+</body>
+<script>
+    let container = document.getElementById("tableDiv")
+    async function createEmpFn(){
+        try {
+            let empName = document.getElementById('name').value;
+            let empAge = document.getElementById('age').value;
+            let empGender = document.getElementById('gender').value;
+            let empDepartment = document.getElementById('department').value;
+            let empSalary = document.getElementById('salary').value;
+            
+            let body={
+                "name" : empName,
+                "age" : empAge,
+                "gender" : empGender,
+                "department" : empDepartment,
+                "salary" : empSalary
+            };
+
+            let  res = await fetch(`http://localhost:3000/employees`,{
+                method:"POST",
+                body:JSON.stringify(body),
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            });
+            let data1 = await res.json();
+            console.log(data1)
+            empManage();
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async function empManage(){
+        try {
+
+            let table=document.createElement('table');
+
+            let thead=document.createElement('thead');
+
+            let headRow=document.createElement('tr');
+
+            let th1=document.createElement('th');
+            th1.textContent = 'EMPLOYEE ID';
+
+            let th2=document.createElement('th');
+            th2.textContent = 'EMPLOYEE NAME';
+
+            let th3=document.createElement('th');
+            th3.textContent = 'EMPLOYEE AGE';
+
+            let th4=document.createElement('th');
+            th4.textContent = 'EMPLOYEE GENDER';
+
+            let th5=document.createElement('th');
+            th5.textContent = 'EMPLOYEE DEPARTMENT';
+
+            let th6=document.createElement('th');
+            th6.textContent = 'EMPLOYEE SALARY';
+
+            headRow.append(th1,th2,th3,th4,th5,th6);
+
+            thead.append(headRow)
+            
+            let res = await fetch(`http://localhost:3000/employees`);
+
+            let data2 = await res.json();
+
+            var tbody = document.createElement('tbody');
+    
+            data2.forEach(empl => {
+                var row = document.createElement('tr');
+
+                var td1 = document.createElement('td');
+                td1.textContent = empl.id;
+                
+                var td2 = document.createElement('td');
+                td2.textContent= empl.name;
+        
+                var td3 = document.createElement('td');
+                td3.textContent= empl.age;
+        
+                var td4 = document.createElement('td');
+                td4.textContent= empl.gender;
+        
+                var td5 = document.createElement('td');
+                td5.textContent= empl.department;
+        
+                var td6 = document.createElement('td');
+                td6.textContent= empl.salary
+
+                row.append(td1,td2,td3,td4,td5,td6);
+                tbody.append(row);
+            });
+            table.append(thead,tbody);
+
+            container.append(table);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    empManage();
+</script>
+</html>
