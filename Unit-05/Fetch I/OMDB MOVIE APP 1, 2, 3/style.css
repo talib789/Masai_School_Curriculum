@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+body{
+    background-color: rgb(5, 5, 35);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    color: white;
+}
+
+nav{
+
+    font-family: "Roboto";
+    
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+} 
+
+nav ul{
+    /* border: 1px solid yellow; */
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: rgb(5, 5, 35);
+    color: white;
+    
+}
+
+nav ul li{
+    padding: 0 12px;
+    cursor: pointer;
+}
+.kids{
+    color: orange;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.brand img{
+    width: 100px;
+    height: 60px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+input{
+    margin-left: 550px;
+    height: 25px;
+    width: 200px;
+    border: none;
+    background-color: rgb(5, 5, 35);
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.searchButton{
+height: 25px;
+width: 40px;
+border: none;
+background-color: rgb(5, 5, 35);
+color: white;
+cursor: pointer;
+}
+
+#slideshow {
+    
+    display: flex;
+    height: 500px;
+    width: 95%;
+    margin-top: 55px;
+    margin-left: 75px;
+    justify-content: center;
+    align-items: center;
+  }
+  #slideshow > img {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    height: 500px;
+    width: 1500px;
+    cursor: pointer;
+    
+  }
+
+.label{
+    color: white;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+  #latest{
+      margin-top: 20px;
+      height: 270px;
+      width: 100%;
+      margin-left: 20px;
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+  }
+
+.ist>img{
+
+    width: 200px;
+    height: 270px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#search_heading{
+    color: white;
+    margin-top: 35px;
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 650px;
+}
+
+#clear_btn{
+    background-color: rgb(5, 5, 35);
+    font-weight: 400;
+    height: 40px;
+    width: 90px;
+    border-color: white;
+    margin-left: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+#clear_btn:hover{
+    background-color: crimson;
+}
+
+#movie{
+    margin-top: 20px;
+    height: 500px;
+    width: 95%;
+    margin-left: 35px;
+    display: flex;
+}
+
+#movie>#errorGif{
+    padding: 20px;
+    width: 850px;
+    margin-top: 20px;
+    margin-left: 250px; 
+}
+
+.movie_advert{
+    width: 40%;
+    height: 450px;
+    margin: auto;
+}
+
+.disc{
+    width: 55%;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    
+}
+
+#movie_poster{
+    height: 100%;
+    width: 100%;
+}
+
+.disc>h2{
+    margin-top: 10px;
+    color: yellowgreen;
+}
+
+
+#recumm{
+   
+    background-color: crimson;
+
+}
