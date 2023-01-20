@@ -10,7 +10,6 @@ const [isAuth,setisAuth] = useState(false);
 
 const toggleAuth = async()=>{
     if(isAuth===false){
-        // fetch("https://reqres.in/api",{})
         axios.post("https://reqres.in/api/login",
         {
             email: "eve.holt@reqres.in",
