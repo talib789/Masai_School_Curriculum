@@ -23,7 +23,6 @@ bench('256 200.000 times', function (b) {
             b.end()
         }
 
-
         //For large file
 
         if (req.url === "/textsync.txt") {
@@ -74,7 +73,6 @@ bench('256 200.000 times', function (b) {
                     console.log(error);
                 })
         }
-
 
        // For Small File
 
@@ -134,14 +132,5 @@ bench('256 200.000 times', function (b) {
     })
 
 })
-
-
-
-
-
-
-
-
-
 
 
