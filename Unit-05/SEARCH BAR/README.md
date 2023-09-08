@@ -1,5 +1,5 @@
 #  SEARCH BAR
 - re-usable navbar
--  user profile on searching for user
--  all the github repos as well of the user searched
-- implement another search bar in explore.html page wherein you should be able to search for all the github users with that name
+- user profile on searching for user
+- all the GitHub repos as well as the user-searched
+- Implement another search bar in the explore.html page wherein you should be able to search for all the GitHub users with that name.
